@@ -7,6 +7,16 @@ html ->
 		link rel: 'stylesheet', href: '//code.jquery.com/mobile/latest/jquery.mobile.min.css'
 		script src: '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'
 		script src: '//code.jquery.com/mobile/latest/jquery.mobile.min.js'
+		script """
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-183817-26']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		"""
 	body ->
 		article data: {role: 'page'}, ->
 			header data: {role: "header"}, ->
