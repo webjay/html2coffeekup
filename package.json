@@ -1,0 +1,11 @@
+{
+	"name": "html2coffeekup-online",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "> 2.5",
+		"coffeekup": "> 0",
+		"coffee-script": "> 1",
+		"htmlkup": "> 1"
+	}
+}
