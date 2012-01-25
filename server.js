@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-//var routes = require('./routes');
 require('coffee-script');
 var htmlkup = require('htmlkup');
 
@@ -17,8 +16,6 @@ app.configure(function(){
 	app.set('view engine', 'coffee');
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
-	//app.use(app.router);
-	//app.use(express.static(__dirname + '/public'));
 	app.register('.coffee', require('coffeekup').adapters.express);
 });
 
@@ -38,10 +35,18 @@ app.get('/convert', function (req, res) {
 	res.redirect('/');
 });
 app.post('/convert', function (req, res) {
+	var coffeekup = '';
+	var errmsg = '';
+	try {
+		coffeekup = htmlkup(req.body.htmlcode);
+	} catch (err) {
+		errmsg = err.message;
+	}
 	res.render('convert', {
 		layout: false,
 		title: 'HTML exposed to `htmlkup`',
-		result: htmlkup(req.body.htmlcode)
+		result: coffeekup,
+		errmsg: errmsg
 	});
 });
 
