@@ -5,7 +5,7 @@ article data: {role: 'page', theme: 'c'}, ->
 		form action: '/convert', method: 'post', ->
 			fieldset data: {role: 'fieldcontain'}, class: 'ui-hide-label', ->
 				label for: 'htmlcode', -> 'HTML'
-				textarea name: 'htmlcode', autofocus: 'autofocus', placeholder: 'put HTML here', required: 'required', data: {theme: 'd'}
+				textarea name: 'htmlcode', id: 'htmlcode', autofocus: 'autofocus', placeholder: 'put HTML here', required: 'required', data: {theme: 'd'}
 				input type: 'submit', value: 'make CoffeeKup markup', data: {theme: 'a'}
 	footer class: 'ui-body', ->
 		small ->

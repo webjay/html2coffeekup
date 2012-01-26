@@ -11,5 +11,5 @@ article data: {role: 'page', theme: 'c'}, ->
 				fieldset ->
 					label for: 'coffeekup', -> 
 						h2 'CoffeeKup markup'
-					textarea name: 'coffeekup', readonly: 'readonly', data: {theme: 'd'}, ->
+					textarea id: 'coffeekup', readonly: 'readonly', data: {theme: 'd'}, ->
 						@result
