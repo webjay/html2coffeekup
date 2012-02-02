@@ -5,8 +5,8 @@ article data: {role: 'page', theme: 'c'}, ->
 		form action: '/convert', method: 'post', ->
 			fieldset data: {role: 'fieldcontain'}, class: 'ui-hide-label', ->
 				label for: 'htmlcode', -> 'HTML'
-				textarea name: 'htmlcode', id: 'htmlcode', autofocus: 'autofocus', placeholder: 'put HTML here', required: 'required', data: {theme: 'd'}
-				input type: 'submit', value: 'make CoffeeKup markup', data: {theme: 'a'}
+				textarea name: 'htmlcode', id: 'htmlcode', tabindex: 1, autofocus: 'autofocus', placeholder: 'put HTML here', required: 'required', data: {theme: 'd'}
+				button type: 'submit', value: 'make CoffeeKup markup', data: {theme: 'a'}, tabindex: 2
 	footer class: 'ui-body', ->
 		small ->
 			strong '/about'
