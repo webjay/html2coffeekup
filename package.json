@@ -6,7 +6,7 @@
 		"npm": "1.1.x"
 	},
 	"dependencies": {
-		"express": "3.0.x",
+		"express": "2.x.x",
 		"coffeekup": "0.x.x",
 		"coffee-script": "1.x.x",
 		"htmlkup": "1.x.x"
